@@ -13,7 +13,6 @@ pycosat==0.6.3
 pycryptodome==3.11.0
 pycryptodomex==3.11.0
 PyJWT==1.7.1
-pywin32==227
 sounddevice==0.4.2
 twilio==6.63.0
 visitor==0.1.3
