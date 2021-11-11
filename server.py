@@ -2,7 +2,7 @@
 from flask import Flask, render_template,request,redirect
 
 from flask_wtf import FlaskForm
-from wtforms import StringField,SubmitField,TextField,IntegerField, SelectField
+from wtforms import StringField,SubmitField,TextAreaField,IntegerField, SelectField
 from wtforms.validators import DataRequired, Email, Length
 from flask_bootstrap import Bootstrap
 from twilio.rest import Client
@@ -21,7 +21,7 @@ class Form(FlaskForm):
     email = StringField(label='Email', validators=[DataRequired(), Email()])
     phone = IntegerField(label='Phone_number', validators=[DataRequired(),Length(min=10)])
     select = SelectField(label='Help', choices=('Children 👶 ', 'Animals 🐶'))
-    text = TextField(label='How much do you wish to donate? ')
+    text = TextAreaField(label='How much do you wish to donate? ')
     submit = SubmitField(label='Submit')
 
 
