@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block title %}
+<title>Clean Blog - Start Bootstrap Theme</title>
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('login') }}" method="post">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.email.label }} <br> {{ form.email(size=30) }}
+        {% if form.email.errors %}
+        {% for err in form.email.errors %}
+        <span style="color:red">{{ err }}</span>
+        {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+         {{ form.password.label }} <br> {{ form.password(size=30) }}
+        {% if form.email.errors %}
+         {% for err in form.password.errors %}
+        <span style="color:red">{{ err }}</span>
+        {% endfor %}
+        {% endif %} 
+    </p>
+
+    {{ form.submit }}
+</form>
+{% endblock %}

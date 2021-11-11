@@ -1,0 +1,118 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+<title xmlns="http://www.w3.org/1999/html">DONATE</title>
+{% endblock %}
+
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{  url_for('static', filename='css/styles.css')  }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html"  >DONATION</a>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('about') }}">About</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('contact') }}">Apply for Grant</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('/static/assets/img/hungry.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Charity Donation </h1>
+                            <span class="subheading">One World</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+<div class="container">
+    <h2>HUNGER IS ON THE RISE</h2>
+<h3><p>For decades, the number of hungry people in the world had been declining. This isn't true anymore. Hunger and food insecurity is on the rise!</p>
+
+    <p>According to the Food and Agriculture Organization of the United Nations (FAO), the number of undernourished people in the world has been on the rise since 2015, and is back to levels seen in 2010 and 2011.
+
+Currently, there are 820 million people in the world who do not have enough to eat.1 And another 2 billion people live without reliable access to a sufficient quantity of affordable, nutritious food that allows them to remain healthy and lead an active live.1 They are food insecure.</p></h3>
+</div>
+        <!-- Main Content-->
+<div class="container">
+		<h1>Give Today</h1>
+        {{ wtf.quick_form(form) }}
+
+
+    </div>
+  <hr class="my-4" />
+                    <!-- Post preview-->
+
+
+                    <!-- Divider-->
+
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+
+
+        <!-- Footer-->
+        <footer class="border-top" style="background-image: url('/static/assets/img/grantlogo.png')">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">ARUAL Foundation
+                            ARUAL Development Office
+                            <p>445 Hoes Lane
+                            Piscataway, NJ 08854, U.S.A.</p>
+                            <p>Phone: +1 8153176218</p>
+                            <p>Email: info@arual.it</p></div>
+                        <div class="small text-center text-muted fst-italic">Copyright Arual 2021</div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{  url_for('static', filename='js/scripts.js')  }}"></script>
+
+{% endblock %}
